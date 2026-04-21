@@ -1,14 +1,13 @@
 car = input('drive or not?')
-if car != 'yes' and car != 'Yes' and car != 'YES' and car != 'No' and car != 'NO' and car != 'no':
+if car not in ['yes', 'Yes', 'YES', 'no', 'No', 'NO']:
     print ('Oh no')
     raise SystemExit
-    
-age = input('How old are you?')
-age = int (age)
-if car == 'yes' or car == 'Yes' or car == 'YES':
+
+age = int(input('How old are you?'))
+if car in ['yes', 'Yes', 'YES']:
     if age >= 18:
         print('Good')
     else:
         print('Police')
-elif car == 'No' or car == 'NO' or car == 'no':
+elif car in ['no', 'No', 'NO']:
     print('OKAY')
